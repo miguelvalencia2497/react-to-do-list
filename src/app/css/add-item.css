@@ -1,0 +1,14 @@
+input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-bottom: 20px; }
+  input[type='submit'] {
+    background-color: pink;
+    color: magenta;
+    border-radius: 10px;
+    border: 0; }
+    input[type='submit']:hover {
+      background-color: #ffa7b6; }
+
+/*# sourceMappingURL=add-item.css.map */

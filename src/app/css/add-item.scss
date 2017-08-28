@@ -1,0 +1,15 @@
+input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-bottom: 20px;
+  &[type='submit'] {
+    background-color: pink;
+    color: magenta;
+    border-radius: 10px;
+    border: 0;
+    &:hover {
+      background-color: darken(pink, 5);
+    }
+  }
+}

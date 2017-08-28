@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { ToDoItem } from './ToDoItem'
+import { ToDoItem } from './ToDoItem';
+import { AddItem } from './AddItem';
+
 require('./css/index.css');
 
 class ToDoComponent extends React.Component {
@@ -10,6 +12,7 @@ class ToDoComponent extends React.Component {
       todos: ['watch rick and morty', 'learn react', 'play dota', 'sleep']
     }
     this.deleteThis = this.deleteThis.bind(this);
+    this.addThis = this.addThis.bind(this);
   }
 
   deleteThis(item) {
@@ -20,6 +23,15 @@ class ToDoComponent extends React.Component {
     this.setState({
       todos: updatedTodos
     });
+  }
+
+  addThis(item){
+      var updatedTodos = this.state.todos;
+      updatedTodos.push(item);
+
+      this.setState({
+        todos: updatedTodos
+      });
   }
 
   render() {
@@ -36,6 +48,7 @@ class ToDoComponent extends React.Component {
         <ul>
           {todos}
         </ul>
+        <AddItem onAdd={this.addThis}/>
       </div>
     );
   }
